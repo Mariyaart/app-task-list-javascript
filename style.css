@@ -1,45 +1,53 @@
 body {
-    font-family: Arial;
-    background: #f2f2f2;
+    background: var(--bg);
+    color: var(--fontColor);
+    font-family: helvetica;
+  }
+
+ul {
+    font-family: helvetica;
 }
 
-.container {
-    width: 420px;
-    margin: 50px auto;
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
+:root {
+    --green: #00FF00;
+    --white: #FFFFFF;
+    --black: #000000;
 }
 
-h1 {
-    text-align: center;
+.light-theme {
+    --bg: var(--green);
+    --fontColor: var(--black);
+    --btnBg: var(--black);
+    --btnFontColor: var(--white);
 }
 
-.input-box {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 20px;
+.dark-theme {
+    --bg: var(--black);
+    --fontColor: var(--green);
+    --btnBg: var(--white);
+    --btnFontColor: var(--black);
 }
 
-input {
-    flex: 1;
-    padding: 8px;
+li {
+    list-style: circle;
+  }
+  
+.list {
+    list-style: square;
 }
+  
+#msg {
+    font-family: monospace;
+} 
 
-button {
-    padding: 8px 12px;
-    cursor: pointer;
-}
-
-.task {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 8px;
-    border-bottom: 1px solid #ddd;
-}
-
-.task-text {
-    flex: 1;
-    margin: 0 10px;
+.btn {
+    position: absolute;
+    top: 20px;
+    left: 250px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: none;
+    color: var(--btnFontColor);
+    background-color: var(--btnBg);
 }
